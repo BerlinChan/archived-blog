@@ -1,0 +1,132 @@
+PanoramaStudioViewerParams = {
+  "panoramaStudioViewer": {
+    "events": {
+      "oninit": "function(){changeByHotspot(1)}",
+      "onstartaudio": "function(){checkAudioPlayStatus()}",
+      "onstopaudio": "function(){checkAudioPlayStatus()}"
+    },
+    "key": "",
+    "audio": {
+      "autoplay": false,
+      "id": "audio1",
+      "loop": true,
+      "src": "bgm.mp3"
+    },
+    "autoplay": {
+      "pan": 1,
+      "restart": 3,
+      "status": "on",
+      "tilt": 0,
+      "zoom": 1
+    },
+    "camera": {
+      "maxpan": 360,
+      "maxtilt": 90,
+      "minpan": 0,
+      "mintilt": -90
+    },
+    "control": {
+      "mousemode": "drag",
+      "touchmode": "drag"
+    },
+    "hotspot": [
+      {
+        "bitmap": "HOTSPO~1.PNG",
+        "bitmapscale": "1.0;1.1",
+        "bitmaptype": "floating",
+        "href": "./brand.json",
+        "position": "293.3280,2.2320",
+        "target": "myself",
+        "textbox": {
+          "align": "top",
+          "style": "margin-top:50px;color:#ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; text-align:center; display: inline;",
+          "text": "<div>大门入口</div>"
+        },
+        "displaytext": "permanent",
+        "transition": "zoomin,0;blend,2",
+        "unit": "deg"
+      },
+      {
+        "bitmap": "HOTSPO~1.PNG",
+        "bitmapscale": "1.0;1.1",
+        "bitmaptype": "floating",
+        "href": "./floor1.json",
+        "position": "334.1520,2.6640",
+        "target": "myself",
+        "textbox": {
+          "align": "top",
+          "style": "margin-top:50px;color:#ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; text-align:center; display: inline;",
+          "text": "<div>维修车间-一楼</div>"
+        },
+        "displaytext": "permanent",
+        "transition": "zoomin,0;blend,2",
+        "unit": "deg"
+      }
+    ],
+    "hotspots": {
+      "visible": true
+    },
+    "version": "4.0",
+    "view": {
+      "hfov": 90,
+      "pan": 4.4500000000000002,
+      "tilt": 0.28000000000000003
+    },
+    "image": {
+      "baseindex": 1,
+      "bitmap": [
+        {
+          "back": {
+            "src": "front_tiles/front_t_1b_%y_%x.jpg"
+          },
+          "down": {
+            "src": "front_tiles/front_t_1d_%y_%x.jpg"
+          },
+          "front": {
+            "src": "front_tiles/front_t_1f_%y_%x.jpg"
+          },
+          "height": 1114,
+          "left": {
+            "src": "front_tiles/front_t_1l_%y_%x.jpg"
+          },
+          "right": {
+            "src": "front_tiles/front_t_1r_%y_%x.jpg"
+          },
+          "tilesize": 557,
+          "up": {
+            "src": "front_tiles/front_t_1u_%y_%x.jpg"
+          },
+          "width": 1114
+        },
+        {
+          "back": {
+            "src": "front_tiles/front_t_2b_%y_%x.jpg"
+          },
+          "down": {
+            "src": "front_tiles/front_t_2d_%y_%x.jpg"
+          },
+          "front": {
+            "src": "front_tiles/front_t_2f_%y_%x.jpg"
+          },
+          "height": 557,
+          "left": {
+            "src": "front_tiles/front_t_2l_%y_%x.jpg"
+          },
+          "right": {
+            "src": "front_tiles/front_t_2r_%y_%x.jpg"
+          },
+          "tilesize": 557,
+          "up": {
+            "src": "front_tiles/front_t_2u_%y_%x.jpg"
+          },
+          "width": 557
+        }
+      ],
+      "multilevel": true,
+      "preview": {
+        "src": "front_tiles/front_preview.jpg"
+      },
+      "projection": "cubic"
+    }
+  }
+}

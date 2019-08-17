@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta content="minimal-ui=yes,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          name="viewport">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta content="brand_tiles\brand_thumb.jpg" property="og:image">
+    <title>有壹手快修-武汉长港店</title>
+    <style>
+        #toolbar {
+            position: fixed;
+            left: 0;
+            bottom: 20px;
+            height: 120px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, .5);
+            z-index: 50;
+            border-bottom: 1px solid #fff;
+            border-top: 1px solid #fff;
+            padding: 10px;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -ms-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s;
+        }
+
+        .small-toolbar {
+            height: 55px !important;
+        }
+
+        @media (max-width: 599px) {
+            #title {
+                font-size: 18px;
+            }
+
+            .small-toolbar {
+                height: 65px !important;
+            }
+
+            #toolbar {
+                height: 190px;
+                bottom: -3px;
+            }
+
+            #thumbs-container {
+                margin-top: 0 !important;
+            }
+
+            #thumbs-container div {
+                width: 900px !important;
+            }
+
+            #thumbs-container div img {
+                width: 200px;
+                height: auto;
+            }
+
+            #buttons-container .next {
+                float: none !important;
+                margin-right: 0 !important;
+            }
+
+            #buttons-container span img {
+                width: 30px !important;
+                height: auto !important;
+            }
+
+            #hide-all {
+                bottom: 6px !important;
+            }
+
+            #hide-all img {
+                width: 30px;
+                height: auto;
+            }
+
+            #addr {
+                display: none;
+            }
+
+            .fullscreen-icon {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="loading"
+     style="z-index: 51;text-align: center;width:95%;position: absolute;top: 50%;height: 26px;margin-top: -13px;">
+    <span style="font-size: 20px;color:#fff;text-shadow: 1px 1px 5px rgba(0,0,0,.8);font-weight: bold;font-style:italic;">Loading...</span>
+</div>
+<div align="center" style="height: 100%; overflow:hidden;">
+    <noscript>
+        <div style="color: red; width: 30%; border: 1px solid red; padding: 4px; font-family: sans-serif;">
+            错误: 你的浏览器必须开启JavaScript用以查看全景漫游。
+        </div>
+    </noscript>
+    <div id="panoStudioViewerID" style="position: absolute; left: 0; top: 0; width: 100% ; height: 100% ;"></div>
+    <script src="panoStudioViewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      panoStudioViewer.insert('panoStudioViewerID', 'brand.json', {html5: 'disable_webgl_warning'});
+    </script>
+</div>
+<div class="" id="toolbar">
+    <div id="title" style="color:#fff;text-shadow: 1px 1px 5px rgba(0,0,0,.8);font-weight: bold;position: absolute;
+         top:-25px;left: 10px;-webkit-transition: 1s;-moz-transition: 1s;-ms-transition: 1s;-o-transition: 1s;
+         transition: 1s;">
+        有壹手快修-武汉长港店-大门入口
+    </div>
+    <div id="addr" style="color:#fff;text-shadow: 1px 1px 5px rgba(0,0,0,.8);position: absolute;top:10px;left:10px;
+         -webkit-transition: 1s;-moz-transition: 1s;-ms-transition: 1s;-o-transition: 1s;transition: 1s;">
+        武汉江汉经济技术开发区长港路9号（实华丰田旁）
+    </div>
+    <div id="thumbs-container" style="text-align: center; -webkit-transition: 1s;-moz-transition: 1s;-ms-transition: 1s;-o-transition: 1s;
+         transition: 1s;margin-top: 20px;overflow-x: auto;overflow-y: hidden;">
+        <div style="width:550px;margin: 0 auto;">
+            <img alt="" height="80" id="thumb-0" onclick="changeScene('0')" src="./thumbs/brand-thumb.jpg"
+                 style="border:3px solid #fff;box-sizing: border-box;cursor: pointer;" width="120">
+            <img alt="" height="80" id="thumb-1" onclick="changeScene('1')" src="./thumbs/front-thumb.jpg"
+                 style="box-sizing: border-box;cursor: pointer;" width="120">
+            <img alt="" height="80" id="thumb-2" onclick="changeScene('2')" src="./thumbs/floor1-thumb.jpg"
+                 style="box-sizing: border-box;cursor: pointer;" width="120">
+            <img alt="" height="80" id="thumb-3" onclick="changeScene('3')" src="./thumbs/floor2-thumb.jpg"
+                 style="box-sizing: border-box;cursor: pointer;" width="120">
+        </div>
+    </div>
+    <div id="buttons-container"
+         style="width:100%;position: absolute;bottom:10px;-webkit-transition: 1s;-moz-transition: 1s;-ms-transition: 1s;-o-transition: 1s;transition: 1s;">
+        <span>
+            <img alt="" onclick="changeScene(activeIndex-1)" src="./icon/iconfont-prev.png" style="cursor: pointer;">
+        </span>
+        <span class="next" style="float:right;margin-right: 70px;">
+            <img alt="" onclick="changeScene(activeIndex+1)" src="./icon/iconfont-next.png" style="cursor: pointer;">
+        </span>
+        <span><img alt="" onclick="toggleToolbar()" src="./icon/iconfont-18window.png" style="cursor: pointer;"></span>
+        <span>
+            <img alt="" id="change-sound-button" onclick="changeSound()" src="./icon/iconfont-sound.png"
+                 style="cursor: pointer;">
+        </span>
+        <span class="fullscreen-icon"><img alt="" onclick="fullscreen()" src="./icon/iconfont-fullscreen.png"
+                                           style="cursor: pointer;"></span>
+    </div>
+</div>
+<div id="hide-all" style="position: fixed;bottom:32px;right:5px;z-index: 51;">
+    <img alt="" id="icon-hide-all" onclick="toggleAll()" src="icon/iconfont-hide.png" style="cursor: pointer;">
+</div>
+<script type="text/javascript">
+  var title = [
+    '有壹手快修-武汉长港店-大门入口',
+    '有壹手快修-武汉长港店-前台',
+    '有壹手快修-武汉长港店-维修车间-一楼',
+    '有壹手快修-武汉长港店-维修车间-二楼',
+  ];
+  var scenes = [
+    './brand.json',
+    './front.json',
+    './floor1.json',
+    './floor2.json',
+  ];
+  var addr = '武汉江汉经济技术开发区长港路9号（实华丰田旁）';
+  var activeIndex = 0;
+  var showToolbar = true;
+  var hideAll = false;
+  var playingAudio = false;
+  showLoadingDelay();
+
+  function changeScene(id) {
+    if (id >= 0 && id < scenes.length && id !== activeIndex) {
+      for (var i = 0; i < scenes.length; i++) {
+        document.getElementById('thumb-' + i).style.border = '0 none';
+      }
+      activeIndex = id;
+      document.getElementById('thumb-' + id).style.border = '3px solid #fff';
+      document.getElementById('title').innerHTML = title[activeIndex];
+      document.getElementById('panoStudioViewerID').panoStudioViewer.openPanorama(scenes[activeIndex]);
+      checkAudioPlayStatus();
+      showLoadingDelay();
+    }
+  }
+
+  function changeByHotspot(id) {
+    if (id >= 0 && id < scenes.length && id !== activeIndex) {
+      for (var i = 0; i < scenes.length; i++) {
+        document.getElementById('thumb-' + i).style.border = '0 none';
+      }
+      activeIndex = id;
+      document.getElementById('thumb-' + id).style.border = '3px solid #fff';
+      document.getElementById('title').innerHTML = title[activeIndex];
+      checkAudioPlayStatus();
+      showLoadingDelay();
+    }
+  }
+
+  function checkAudioPlayStatus() {
+    var player = document.getElementById('panoStudioViewerID').panoStudioViewer.get('audio1');
+    if (!!player) {
+      if (playingAudio) {
+        player.play();
+      } else {
+        player.pause();
+      }
+    }
+  }
+
+  function changeSound() {
+    var player = document.getElementById('panoStudioViewerID').panoStudioViewer.get('audio1');
+    var icon = document.getElementById('change-sound-button');
+    if (!!player) {
+      if (player.isPlaying()) {
+        player.pause();
+        icon.setAttribute('src', './icon/iconfont-mute.png');
+        playingAudio = false;
+      } else {
+        player.play();
+        icon.setAttribute('src', './icon/iconfont-sound.png');
+        playingAudio = true;
+      }
+    }
+  }
+
+  function toggleToolbar() {
+    if (showToolbar) {
+      showToolbar = false;
+      document.getElementById('toolbar').setAttribute('class', 'small-toolbar');
+      document.getElementById('thumbs-container').style.opacity = 0;
+      document.getElementById('thumbs-container').style.marginTop = '100px';
+      document.getElementById('addr').style.opacity = 0;
+      document.getElementById('title').style.top = '10px';
+    } else {
+      showToolbar = true;
+      document.getElementById('toolbar').setAttribute('class', '');
+      document.getElementById('thumbs-container').style.opacity = 1;
+      document.getElementById('thumbs-container').style.marginTop = '20px';
+      document.getElementById('addr').style.opacity = 1;
+      document.getElementById('title').style.top = '-25px';
+    }
+  }
+
+  function fullscreen() {
+    document.getElementById('panoStudioViewerID').panoStudioViewer.toggleFullscreen();
+  }
+
+  function toggleAll() {
+    if (hideAll) {
+      hideAll = false;
+      document.getElementById('toolbar').style.transform = 'translateY(0)';
+      document.getElementById('icon-hide-all').setAttribute('src', 'icon/iconfont-hide.png');
+    } else {
+      hideAll = true;
+      document.getElementById('toolbar').style.transform = 'translateY(250px)';
+      document.getElementById('icon-hide-all').setAttribute('src', 'icon/iconfont-show-all.png');
+    }
+  }
+
+  //延迟隐藏Loading提示框
+  function showLoadingDelay() {
+    document.getElementById('loading').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('loading').style.display = 'none';
+    }, 2000);
+  }
+</script>
+</body>
+</html>

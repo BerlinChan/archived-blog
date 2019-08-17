@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="no-js no-svg" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="//archived-blog.berlinchan.com/favicon.ico" rel="shortcut icon">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43244265-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {dataLayer.push(arguments);}
+
+      gtag('js', new Date());
+      gtag('config', 'UA-43244265-2');
+    </script>
+    <script>(function(html) {html.className = html.className.replace(/\bno-js\b/, 'js');})(
+        document.documentElement);</script>
+    <title>小试用Adobe Edge Reflow制作“响应式”web页 – 摄影师陈柏林</title>
+    <link href="//archived-blog.berlinchan.com/wp-includes/css/dist/block-library/style.min.css"
+          id="wp-block-library-css" media="all" rel="stylesheet" type="text/css">
+    <link href="//archived-blog.berlinchan.com/wp-includes/css/dist/block-library/theme.min.css"
+          id="wp-block-library-theme-css" media="all" rel="stylesheet" type="text/css">
+    <link href="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/style.css"
+          id="twentyseventeen-style-css" media="all" rel="stylesheet" type="text/css">
+    <link href="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/assets/css/blocks.css"
+          id="twentyseventeen-block-style-css" media="all" rel="stylesheet" type="text/css">
+    <script src="//archived-blog.berlinchan.com/wp-includes/js/jquery/jquery.js" type="text/javascript"></script>
+    <script src="//archived-blog.berlinchan.com/wp-includes/js/jquery/jquery-migrate.min.js"
+            type="text/javascript"></script>
+</head>
+<body class="post-template-default single single-post postid-1615 single-format-standard wp-embed-responsive has-sidebar colors-light">
+<div class="site" id="page">
+    <a class="skip-link screen-reader-text" href="#content">跳至内容</a>
+    <header class="site-header" id="masthead" role="banner">
+        <div class="custom-header">
+            <div class="custom-header-media">
+            </div>
+            <div class="site-branding">
+                <div class="wrap">
+                    <div class="site-branding-text">
+                        <p class="site-title"><a href="//archived-blog.berlinchan.com/" rel="home">摄影师陈柏林</a></p>
+                        <p class="site-description">乘着影像去探索</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navigation-top">
+            <div class="wrap">
+                <nav aria-label="顶部菜单" class="main-navigation" id="site-navigation" role="navigation">
+                    <button aria-controls="top-menu" aria-expanded="false" class="menu-toggle">
+                        <svg aria-hidden="true" class="icon icon-bars" role="img">
+                            <use href="#icon-bars"/>
+                        </svg>
+                        <svg aria-hidden="true" class="icon icon-close" role="img">
+                            <use href="#icon-close"/>
+                        </svg>
+                        菜单
+                    </button>
+                    <div class="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95-container">
+                        <ul class="menu" id="top-menu">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2514"
+                                id="menu-item-2514"><a href="http://berlinchan.local">首页</a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1190"
+                                id="menu-item-1190">
+                                <a href="//archived-blog.berlinchan.com/portfolio/">作品
+                                    <svg aria-hidden="true" class="icon icon-angle-down" role="img">
+                                        <use href="#icon-angle-down"/>
+                                    </svg>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1331"
+                                        id="menu-item-1331">
+                                        <a href="http://www.aWildPetCat.com">纪录片《自由的家猫》</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1191"
+                                        id="menu-item-1191">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/awildpetcat/">《自由的家猫》剧照</a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"
+                                        id="menu-item-1192">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/yichang/">照片集 – 发展中的宜昌</a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1193"
+                                        id="menu-item-1193">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/building/">照片集 – 建筑与装饰</a>
+                                    </li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194"
+                                        id="menu-item-1194">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/isee/">照片集 – 我所见</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1195"
+                                        id="menu-item-1195">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/abstract/">照片集 – 抽象元素</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"
+                                        id="menu-item-1196">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/bridge/">照片集 – 桥</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1197"
+                                        id="menu-item-1197">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/natural/">照片集 – 自然</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1198"
+                                        id="menu-item-1198">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/street/">照片集 – 街头</a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1199"
+                                        id="menu-item-1199">
+                                        <a href="//archived-blog.berlinchan.com/portfolio/ycfdc/">照片集 – 宜昌房产形象</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2519"
+                                id="menu-item-2519"><a href="//archived-blog.berlinchan.com/about/">关于</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="single-featured-image-header"><img
+            class="attachment-twentyseventeen-featured-image size-twentyseventeen-featured-image wp-post-image"
+            height="394" sizes="100vw"
+            src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg"
+            srcset="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg 640w,//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design-300x184.jpg 300w"
+            width="640"></div>
+    <div class="site-content-contain">
+        <div class="site-content" id="content">
+            <div class="wrap">
+                <div class="content-area" id="primary">
+                    <main class="site-main" id="main" role="main">
+                        <article
+                                class="post-1615 post type-post status-publish format-standard has-post-thumbnail hentry category-pcandinternet tag-adobe-edge-reflow tag-resposive-web-design tag-rwd tag-responsive-web-design tag-xiangyang tag-xiangyang-strange"
+                                id="post-1615">
+                            <header class="entry-header">
+                                <div class="entry-meta"><span class="posted-on"><span
+                                        class="screen-reader-text">发布于</span><a
+                                        href="//archived-blog.berlinchan.com/2014/11/try-responsive-web-design-with-reflow/"
+                                        rel="bookmark"><time class="entry-date published"
+                                                             datetime="2014-11-24T19:49:36+08:00">2014-11-24</time><time
+                                        class="updated"
+                                        datetime="2015-12-12T14:25:14+08:00">2015-12-12</time></a></span><span
+                                        class="byline"> 由<span class="author vcard"><a class="url fn n"
+                                                                                       href="//archived-blog.berlinchan.com//">摄影师陈柏林</a></span></span>
+                                </div>
+                                <h1 class="entry-title">小试用Adobe Edge Reflow制作“响应式”web页</h1></header>
+                            <div class="entry-content">
+                                <p>预览页面：<a href="http://hb.qq.com/zt2014/wantknowmore/wantknowmore01.htm"
+                                           target="_blank">寻访襄阳十八怪-大楚襄阳-“襄”知道吗-第1集</a></p>
+                                <p>
+                                    很久没有折腾web设计相关的事情，前段时间因为工作上有个不错的想法，我决定尝试下“响应式web设计”。说下我碰到的问题和如何解决，也许对有兴趣的人会有用。我制作的成品看起来不太美观，只是尝试下相应式web设计的方法，让思维与时俱进吧。</p>
+                                <h1>什么是响应式web设计</h1>
+                                <figure aria-describedby="caption-attachment-1616" class="wp-caption aligncenter"
+                                        id="attachment_1616" style="width: 640px"><a
+                                        href="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg"><img
+                                        alt="responsive-web-design" class="wp-image-1616 size-full" height="394"
+                                        sizes="(max-width: 640px) 100vw, 640px"
+                                        src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg"
+                                        srcset="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design.jpg 640w,//archived-blog.berlinchan.com/wp-content/uploads/2014/11/responsive-web-design-300x184.jpg 300w"
+                                        width="640"></a>
+                                    <figcaption class="wp-caption-text" id="caption-attachment-1616">
+                                        响应式web设计，使网站在多种浏览设备上阅读和导航，同时减少缩放、平移和滚动
+                                    </figcaption>
+                                </figure>
+                                <p>响应式web设计，引用下Wiki百科的解释：英文是Responsive Web Design（通常缩写为RWD），又称为自适应网页设计、响应式网页设计。
+                                    是一种网页设计的技术做法，该设计可使网站在多种浏览设备（从桌面电脑显示器到移动电话或其他流动产品装置）上阅读和导航，同时减少缩放、平移和滚动，完整说明请见<a
+                                            href="http://zh.wikipedia.org/zh/%E5%93%8D%E5%BA%94%E5%BC%8F%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1"
+                                            target="_blank">Wiki百科页面</a>。</p>
+                                <h1>为什么做这个尝试</h1>
+                                <p>
+                                    互联网消费向移动端转移，这是个顺应趋势的有益尝试。另外我想实现通过多种多媒体手段，包括图片、影片、声音、动画、文字、交互、设计来“讲故事”，用前段时间很时髦的词，也可是说是“全媒体”尝试。</p>
+                                <p>网络媒体是利用所有这些形式来传递信息的媒介了，何不利用好这一优势。</p>
+                                <p>我所在的单位有个说法叫“H5”，有好的内容需要包装，除了会为电脑端制作页面，另外为移动端制作个页面，也就是做个“H5”。</p>
+                                <p>通过<strong>多种多媒体方式，用响应式web设计呈现，以达到在不同终端，风格相似、完整、清晰的呈现内容</strong>，这样做真是太棒了！</p>
+                                <h1>关于“大楚襄阳-襄知道吗”栏目</h1>
+                                <figure aria-describedby="caption-attachment-1619" class="wp-caption aligncenter"
+                                        id="attachment_1619" style="width: 280px"><a
+                                        href="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/item01-e1416732036232.jpg"><img
+                                        alt="人力三轮车倒着踩-襄阳十八怪" class="wp-image-1619 size-full" height="317"
+                                        sizes="(max-width: 280px) 100vw, 280px"
+                                        src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/item01-e1416732036232.jpg"
+                                        srcset="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/item01-e1416732036232.jpg 280w,//archived-blog.berlinchan.com/wp-content/uploads/2014/11/item01-e1416732036232-264x300.jpg 264w"
+                                        width="280"></a>
+                                    <figcaption class="wp-caption-text" id="caption-attachment-1619">人力三轮车倒着踩-襄阳十八怪
+                                    </figcaption>
+                                </figure>
+                                <p>
+                                    “襄知道吗”这个栏目名字是同事的主意，第一期内容选题是“襄阳十八怪”，是襄阳一对师生合作撰写的关于襄阳历史、民俗的打油诗，其中的“人力三轮倒着踩”真经典，让我想起来我小时候爸爸出差带我去襄阳，看师傅踩稀奇的三轮车，最后还讲方言“带一个袜子还加一块欠”。</p>
+                                <p>这个有趣的选题也符合我想要的<strong>有趣又智慧</strong>，而且作者的这一番用心让我觉得很佩服。</p>
+                                <h1>心得</h1>
+                                <p>下面开始正题。</p>
+                                <p>Adobe Edge Reflow是免费软件，现在是预览版，<a
+                                        href="https://creative.adobe.com/zh-tw/products/reflow"
+                                        target="_blank">官方页请点此</a>。</p>
+                                <p>在使用软件前我找到这些<strong>参考资料</strong>：</p>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.adobe.com/cn/devnet/edge-reflow/articles/edge-reflow-getting-started.html"
+                                           target="_blank">Edge Reflow CC 入门</a></li>
+                                    <li>
+                                        <a href="magnet:?xt=urn:btih:CD1E8284274A1038813B7C7881484E72D8317D9F&dn=lynda+com+creating+a+responsive+design+with+edge+reflow+elohim&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce"
+                                           target="_blank">Creating a Responsive Design with Edge
+                                            Reflow(来自Lynda的视频教程磁力下载链接)</a></li>
+                                </ul>
+                                <p>我的页面是为电脑端呈现为主，同时适配移动端，所以我选择<strong>使用最大媒体查询</strong>，而后选定3种媒体查询尺寸：960px、768px、480px,分别对应典型的电脑端、平板电脑、智能手机，当然还有一个default默认。
+                                </p>
+                                <p>
+                                    <a href="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/LE3KLY7YMH541XJ4XZZSA.jpg"><img
+                                            alt="媒体查询尺寸" class="aligncenter size-full wp-image-1627" height="235"
+                                            src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/LE3KLY7YMH541XJ4XZZSA.jpg"
+                                            width="265"></a></p>
+                                <p>设计当中，<strong>从默认尺寸开始，然后逐个往小尺寸进行</strong>，在编辑更小尺寸的时，根据需要覆盖页面元素的定位与尺寸，这样才不易混乱。</p>
+                                <p>在我的工作流程中，先在Photoshop中画出线框图，然后导出图片到Edge Reflow中编辑。<a
+                                        href="http://html.adobe.com/edge/reflow/photoshop-plug-in.html" target="_blank">Edge
+                                    Reflow配合Photoshop互连</a>，可以方便的导入智能对象、形状、图层等，我在试用中没能连接上，可能是我的Edge Reflow版本不对。我<strong>使用PS当中的“生成”功能</strong>，为频繁修改、导出单独图片元素增加不少效率。
+                                </p>
+                                <p>
+                                    <a href="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/1P94MKRRE3XUYQUY9U.jpg"><img
+                                            alt="PSCC中的生成功能" class="aligncenter size-full wp-image-1628" height="297"
+                                            sizes="(max-width: 376px) 100vw, 376px"
+                                            src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/1P94MKRRE3XUYQUY9U.jpg"
+                                            srcset="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/1P94MKRRE3XUYQUY9U.jpg 376w,//archived-blog.berlinchan.com/wp-content/uploads/2014/11/1P94MKRRE3XUYQUY9U-300x236.jpg 300w"
+                                            width="376"></a></p>
+                                <p>Edge Reflow更多起到的是一个设计页面框架（框架层）的作用，同时做一些粗略的样式编辑（表现层,详情见<a
+                                        href="http://www.jjg.net/elements/pdf/elements.pdf" target="_blank">用户体验要素</a>），因为这两项工作在Edge
+                                    Reflow中进行的好处就是，<strong>完全的“所见即所得”</strong>。之后再将生成的HTML与CSS放到Dreamweaver中添加视频、设置字体样式等。
+                                </p>
+                                <p>调试中我使用Chrome浏览器，模拟测试不同移动设备的呈现效果，最后再放到手机上测试。</p>
+                                <p>
+                                    <a href="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/IPOIN41LDU73B8P3P7UJ.jpg"><img
+                                            alt="在Chrome中调试移动端页面" class="aligncenter size-full wp-image-1629"
+                                            height="377" sizes="(max-width: 282px) 100vw, 282px"
+                                            src="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/IPOIN41LDU73B8P3P7UJ.jpg"
+                                            srcset="//archived-blog.berlinchan.com/wp-content/uploads/2014/11/IPOIN41LDU73B8P3P7UJ.jpg 282w,//archived-blog.berlinchan.com/wp-content/uploads/2014/11/IPOIN41LDU73B8P3P7UJ-224x300.jpg 224w"
+                                            width="282"></a></p>
+                                <h1>最后</h1>
+                                <p>电脑端生产内容-移动端消费内容，相比于电脑端生产-电脑端消费来说，千差万别的终端设备，给web前端设计人员带来<strong>调试方面更大的挑战，</strong>Adobe提供Edge
+                                    Inspect来方便在移动终端调试页面。但看我做的这个试验品，感觉很失败。在这公司呆久了，线框图提笔一画，就是Banner+区块罗列的模式，思维都固化咯，感觉很失败。
+                                </p>
+                            </div>
+                            <footer class="entry-footer"><span class="cat-tags-links"><span class="cat-links"><svg
+                                    aria-hidden="true" class="icon icon-folder-open" role="img"> <use
+                                    href="#icon-folder-open"/> </svg><span class="screen-reader-text">分类</span><a
+                                    href="//archived-blog.berlinchan.com/category/pcandinternet/" rel="category tag">计算机与网络</a></span><span
+                                    class="tags-links"><svg aria-hidden="true" class="icon icon-hashtag" role="img"> <use
+                                    href="#icon-hashtag"/> </svg><span class="screen-reader-text">标签</span><a
+                                    href="//archived-blog.berlinchan.com/tag/adobe-edge-reflow/" rel="tag">Adobe Edge Reflow</a>、<a
+                                    href="//archived-blog.berlinchan.com/tag/resposive-web-design/" rel="tag">Resposive Web Design</a>、<a
+                                    href="//archived-blog.berlinchan.com/tag/rwd/" rel="tag">RWD</a>、<a
+                                    href="//archived-blog.berlinchan.com/tag/responsive-web-design/"
+                                    rel="tag">响应式web设计</a>、<a href="//archived-blog.berlinchan.com/tag/xiangyang/"
+                                                              rel="tag">襄阳</a>、<a
+                                    href="//archived-blog.berlinchan.com/tag/xiangyang-strange/"
+                                    rel="tag">襄阳十八怪</a></span></span></footer>
+                        </article>
+                        <nav class="navigation post-navigation" role="navigation">
+                            <h2 class="screen-reader-text">文章导航</h2>
+                            <div class="nav-links">
+                                <div class="nav-previous"><a
+                                        href="//archived-blog.berlinchan.com/2014/11/a-letter-to-friend/"
+                                        rel="prev"><span class="screen-reader-text">上一篇文章</span><span aria-hidden="true"
+                                                                                                      class="nav-subtitle">上一篇</span>
+                                    <span class="nav-title"><span class="nav-title-icon-wrapper"><svg aria-hidden="true"
+                                                                                                      class="icon icon-arrow-left"
+                                                                                                      role="img"> <use
+                                            href="#icon-arrow-left"/> </svg></span>赠朋友《少有人走的路》一书与信件</span></a>
+                                </div>
+                                <div class="nav-next"><a
+                                        href="//archived-blog.berlinchan.com/2014/11/qq-animation-project-1/"
+                                        rel="next"><span class="screen-reader-text">下一篇文章</span><span aria-hidden="true"
+                                                                                                      class="nav-subtitle">下一篇</span>
+                                    <span class="nav-title">Q仔动画愚人节项目1——建模、绑定与动画测试<span class="nav-title-icon-wrapper"><svg
+                                            aria-hidden="true" class="icon icon-arrow-right" role="img"> <use
+                                            href="#icon-arrow-right"/> </svg></span></span></a>
+                                </div>
+                            </div>
+                        </nav>
+                    </main>
+                </div>
+                <aside aria-label="博客边栏" class="widget-area" id="secondary" role="complementary">
+                    <section class="widget widget_categories" id="categories-2"><h2 class="widget-title">分类目录</h2>
+                        <ul>
+                            <li class="cat-item cat-item-670"><a
+                                    href="//archived-blog.berlinchan.com/category/front-end/">前端</a>
+                            </li>
+                            <li class="cat-item cat-item-210"><a
+                                    href="//archived-blog.berlinchan.com/category/equipment/"
+                                    title="摄影、摄像器材五花八门，自制、DIY闪现智慧光芒。">折腾装备</a>
+                            </li>
+                            <li class="cat-item cat-item-202"><a
+                                    href="//archived-blog.berlinchan.com/category/thinking/"
+                                    title="生活大事小事、家人、朋友、心路的记载。">折腾随想</a>
+                            </li>
+                            <li class="cat-item cat-item-213"><a href="//archived-blog.berlinchan.com/category/learn/"
+                                                                 title="理论路上不断学习，实践路上不断试验。">摄影学习与折腾</a>
+                            </li>
+                            <li class="cat-item cat-item-666"><a
+                                    href="//archived-blog.berlinchan.com/category/database/">数据库</a>
+                            </li>
+                            <li class="cat-item cat-item-704"><a href="//archived-blog.berlinchan.com/category/diary/">日记</a>
+                            </li>
+                            <li class="cat-item cat-item-781"><a href="//archived-blog.berlinchan.com/category/critic/">时事评论</a>
+                            </li>
+                            <li class="cat-item cat-item-211"><a href="//archived-blog.berlinchan.com/category/story/"
+                                                                 title="精选个人作品和它们背后的故事。">照片故事</a>
+                            </li>
+                            <li class="cat-item cat-item-208"><a href="//archived-blog.berlinchan.com/category/film/"
+                                                                 title="比静态图像更丰富的表达形式，讲故事的最高手段。记载独立电影、纪录片、剧本、摄像、录音、后期、视效、电影音乐、Maya、经验、实验短片相关。">独立电影与短片</a>
+                            </li>
+                            <li class="cat-item cat-item-498"><a
+                                    href="//archived-blog.berlinchan.com/category/entertainment/">生活娱乐活动</a>
+                            </li>
+                            <li class="cat-item cat-item-209"><a
+                                    href="//archived-blog.berlinchan.com/category/knowledge/"
+                                    title="旅行、生活、工作中的所见所闻，稀奇、有趣、大小琐事的无所不记。">见闻杂事</a>
+                            </li>
+                            <li class="cat-item cat-item-212"><a
+                                    href="//archived-blog.berlinchan.com/category/pcandinternet/"
+                                    title="计算机是数字时代的核心，软硬件是折腾背后的保障，网络是知识的储备库。记载关于影像的计算机软硬件和网络资源。">计算机与网络</a>
+                            </li>
+                            <li class="cat-item cat-item-691"><a href="//archived-blog.berlinchan.com/category/books/">读书</a>
+                            </li>
+                            <li class="cat-item cat-item-675"><a
+                                    href="//archived-blog.berlinchan.com/category/software/">软件</a>
+                            </li>
+                            <li class="cat-item cat-item-486"><a href="//archived-blog.berlinchan.com/category/bts/">镜头背后</a>
+                            </li>
+                            <li class="cat-item cat-item-775"><a href="//archived-blog.berlinchan.com/category/music/">音乐</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="widget widget_tag_cloud" id="tag_cloud-2"><h2 class="widget-title">标签</h2>
+                        <div class="tagcloud">
+                            <ul class="wp-tag-cloud" role="list">
+                                <li><a class="tag-cloud-link tag-link-177 tag-link-position-1"
+                                       href="//archived-blog.berlinchan.com/tag/cg/" style="font-size: 1em;">CG</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-158 tag-link-position-2"
+                                       href="//archived-blog.berlinchan.com/tag/diy/" style="font-size: 1em;">DIY</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-476 tag-link-position-3"
+                                       href="//archived-blog.berlinchan.com/tag/maya/" style="font-size: 1em;">Maya</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-558 tag-link-position-4"
+                                       href="//archived-blog.berlinchan.com/tag/qq/" style="font-size: 1em;">QQ</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-393 tag-link-position-5"
+                                       href="//archived-blog.berlinchan.com/tag/three-gorges-evening/"
+                                       style="font-size: 1em;">三峡晚报</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-621 tag-link-position-6"
+                                       href="//archived-blog.berlinchan.com/tag/portrait/"
+                                       style="font-size: 1em;">人像</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-473 tag-link-position-7"
+                                       href="//archived-blog.berlinchan.com/tag/canon-camera/" style="font-size: 1em;">佳能</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-615 tag-link-position-8"
+                                       href="//archived-blog.berlinchan.com/tag/panorama/"
+                                       style="font-size: 1em;">全景</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-480 tag-link-position-9"
+                                       href="//archived-blog.berlinchan.com/tag/animation/"
+                                       style="font-size: 1em;">动画</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-108 tag-link-position-10"
+                                       href="//archived-blog.berlinchan.com/tag/domain-name/"
+                                       style="font-size: 1em;">域名</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-142 tag-link-position-11"
+                                       href="//archived-blog.berlinchan.com/tag/beian/" style="font-size: 1em;">备案</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-505 tag-link-position-12"
+                                       href="//archived-blog.berlinchan.com/tag/dachu/" style="font-size: 1em;">大楚网</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-119 tag-link-position-13"
+                                       href="//archived-blog.berlinchan.com/tag/learning/"
+                                       style="font-size: 1em;">学习</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-599 tag-link-position-14"
+                                       href="//archived-blog.berlinchan.com/tag/yichang/" style="font-size: 1em;">宜昌</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-664 tag-link-position-15"
+                                       href="//archived-blog.berlinchan.com/tag/family/" style="font-size: 1em;">家庭</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-606 tag-link-position-16"
+                                       href="//archived-blog.berlinchan.com/tag/job/" style="font-size: 1em;">工作</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-134 tag-link-position-17"
+                                       href="//archived-blog.berlinchan.com/tag/heart/" style="font-size: 1em;">心路</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-112 tag-link-position-18"
+                                       href="//archived-blog.berlinchan.com/tag/thinking/"
+                                       style="font-size: 1em;">思考</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-559 tag-link-position-19"
+                                       href="//archived-blog.berlinchan.com/tag/april-fools-day/"
+                                       style="font-size: 1em;">愚人节</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-121 tag-link-position-20"
+                                       href="//archived-blog.berlinchan.com/tag/feeling/" style="font-size: 1em;">感悟</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-483 tag-link-position-21"
+                                       href="//archived-blog.berlinchan.com/tag/real-estate/" style="font-size: 1em;">房地产</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-632 tag-link-position-22"
+                                       href="//archived-blog.berlinchan.com/tag/mobil-phone/"
+                                       style="font-size: 1em;">手机</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-131 tag-link-position-23"
+                                       href="//archived-blog.berlinchan.com/tag/cinematography/"
+                                       style="font-size: 1em;">摄像</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-111 tag-link-position-24"
+                                       href="//archived-blog.berlinchan.com/tag/photography/"
+                                       style="font-size: 1em;">摄影</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-456 tag-link-position-25"
+                                       href="//archived-blog.berlinchan.com/tag/tutorial/"
+                                       style="font-size: 1em;">教程</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-524 tag-link-position-26"
+                                       href="//archived-blog.berlinchan.com/tag/travel/" style="font-size: 1em;">旅游</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-601 tag-link-position-27"
+                                       href="//archived-blog.berlinchan.com/tag/friends/" style="font-size: 1em;">朋友</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-628 tag-link-position-28"
+                                       href="//archived-blog.berlinchan.com/tag/wuhan/" style="font-size: 1em;">武汉</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-170 tag-link-position-29"
+                                       href="//archived-blog.berlinchan.com/tag/event/" style="font-size: 1em;">活动</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-604 tag-link-position-30"
+                                       href="//archived-blog.berlinchan.com/tag/independent-film/"
+                                       style="font-size: 1em;">独立影片</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-634 tag-link-position-31"
+                                       href="//archived-blog.berlinchan.com/tag/life/" style="font-size: 1em;">生活</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-605 tag-link-position-32"
+                                       href="//archived-blog.berlinchan.com/tag/movie/" style="font-size: 1em;">电影</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-162 tag-link-position-33"
+                                       href="//archived-blog.berlinchan.com/tag/short-film/"
+                                       style="font-size: 1em;">短片</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-441 tag-link-position-34"
+                                       href="//archived-blog.berlinchan.com/tag/blessing/"
+                                       style="font-size: 1em;">祝福</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-603 tag-link-position-35"
+                                       href="//archived-blog.berlinchan.com/tag/documentary/" style="font-size: 1em;">纪录片</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-95 tag-link-position-36"
+                                       href="//archived-blog.berlinchan.com/tag/website/" style="font-size: 1em;">网站</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-511 tag-link-position-37"
+                                       href="//archived-blog.berlinchan.com/tag/tencent/" style="font-size: 1em;">腾讯</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-602 tag-link-position-38"
+                                       href="//archived-blog.berlinchan.com/tag/awildpetcat/" style="font-size: 1em;">自由的家猫</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-665 tag-link-position-39"
+                                       href="//archived-blog.berlinchan.com/tag/self-driving/" style="font-size: 1em;">自驾</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-115 tag-link-position-40"
+                                       href="//archived-blog.berlinchan.com/tag/xiangyang/"
+                                       style="font-size: 1em;">襄阳</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-554 tag-link-position-41"
+                                       href="//archived-blog.berlinchan.com/tag/reading/" style="font-size: 1em;">读书</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-768 tag-link-position-42"
+                                       href="//archived-blog.berlinchan.com/tag/piano/" style="font-size: 1em;">钢琴</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-133 tag-link-position-43"
+                                       href="//archived-blog.berlinchan.com/tag/strobe-light/" style="font-size: 1em;">闪光灯</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-535 tag-link-position-44"
+                                       href="//archived-blog.berlinchan.com/tag/mengyao/"
+                                       style="font-size: 1em;">魏梦瑶</a>
+                                </li>
+                                <li><a class="tag-cloud-link tag-link-533 tag-link-position-45"
+                                       href="//archived-blog.berlinchan.com/tag/flowers/" style="font-size: 1em;">鲜花</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="widget widget_archive" id="archives-3"><h2 class="widget-title">文章归档</h2><label
+                            class="screen-reader-text" for="archives-dropdown-3">文章归档</label>
+                        <select id="archives-dropdown-3" name="archive-dropdown">
+                            <option value>选择月份</option>
+                            <option value="//archived-blog.berlinchan.com/2019/08/"> 2019年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2019/05/"> 2019年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2019/03/"> 2019年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/12/"> 2018年十二月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/11/"> 2018年十一月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/09/"> 2018年九月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/08/"> 2018年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/06/"> 2018年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2018/03/"> 2018年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/09/"> 2017年九月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/08/"> 2017年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/07/"> 2017年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/05/"> 2017年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/03/"> 2017年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/02/"> 2017年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2017/01/"> 2017年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/12/"> 2016年十二月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/11/"> 2016年十一月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/08/"> 2016年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/07/"> 2016年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/06/"> 2016年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/05/"> 2016年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/03/"> 2016年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/02/"> 2016年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2016/01/"> 2016年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2015/10/"> 2015年十月</option>
+                            <option value="//archived-blog.berlinchan.com/2015/06/"> 2015年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2015/05/"> 2015年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2015/04/"> 2015年四月</option>
+                            <option value="//archived-blog.berlinchan.com/2015/02/"> 2015年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/12/"> 2014年十二月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/11/"> 2014年十一月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/07/"> 2014年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/06/"> 2014年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/05/"> 2014年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/04/"> 2014年四月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/03/"> 2014年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/02/"> 2014年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2014/01/"> 2014年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/11/"> 2013年十一月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/09/"> 2013年九月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/08/"> 2013年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/07/"> 2013年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/06/"> 2013年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/04/"> 2013年四月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/03/"> 2013年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2013/01/"> 2013年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/11/"> 2012年十一月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/10/"> 2012年十月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/09/"> 2012年九月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/08/"> 2012年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/07/"> 2012年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/06/"> 2012年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/05/"> 2012年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/04/"> 2012年四月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/03/"> 2012年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/02/"> 2012年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2012/01/"> 2012年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/10/"> 2011年十月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/09/"> 2011年九月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/08/"> 2011年八月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/07/"> 2011年七月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/06/"> 2011年六月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/05/"> 2011年五月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/03/"> 2011年三月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/02/"> 2011年二月</option>
+                            <option value="//archived-blog.berlinchan.com/2011/01/"> 2011年一月</option>
+                            <option value="//archived-blog.berlinchan.com/2010/12/"> 2010年十二月</option>
+                            <option value="//archived-blog.berlinchan.com/2010/11/"> 2010年十一月</option>
+                        </select>
+                        <script type="text/javascript">
+                          /* <![CDATA[ */
+                          (function() {
+                            var dropdown = document.getElementById('archives-dropdown-3');
+
+                            function onSelectChange() {
+                              if (dropdown.options[dropdown.selectedIndex].value !== '') {
+                                document.location.href = this.options[this.selectedIndex].value;
+                              }
+                            }
+
+                            dropdown.onchange = onSelectChange;
+                          })();
+                          /* ]]> */
+                        </script>
+                    </section>
+                </aside>
+            </div>
+        </div>
+        <footer class="site-footer" id="colophon" role="contentinfo">
+            <div class="wrap">
+                <div class="site-info">
+                    <a class="imprint" href="https://cn.wordpress.org/">
+                        自豪地曾采用WordPress </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var twentyseventeenScreenReaderText = {
+    'quote': '<svg class="icon icon-quote-right" aria-hidden="true" role="img"> <use href="#icon-quote-right" xlink:href="#icon-quote-right"><\/use> <\/svg>',
+    'expand': '\u5c55\u5f00\u5b50\u83dc\u5355',
+    'collapse': '\u6298\u53e0\u5b50\u83dc\u5355',
+    'icon': '<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"><\/use> <span class="svg-fallback icon-angle-down"><\/span><\/svg>',
+  };
+  /* ]]> */
+</script>
+<script src="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/assets/js/skip-link-focus-fix.js"
+        type="text/javascript"></script>
+<script src="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/assets/js/navigation.js"
+        type="text/javascript"></script>
+<script src="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/assets/js/global.js"
+        type="text/javascript"></script>
+<script src="//archived-blog.berlinchan.com/wp-content/themes/twentyseventeen/assets/js/jquery.scrollTo.js"
+        type="text/javascript"></script>
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+     xlink="http://www.w3.org/1999/xlink"
+     xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="icon-close" viewBox="0 0 25 32">
+            <path class="path1"
+                  d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z"/>
+        </symbol>
+        <symbol id="icon-angle-down" viewBox="0 0 21 32">
+            <path class="path1"
+                  d="M19.196 13.143q0 0.232-0.179 0.411l-8.321 8.321q-0.179 0.179-0.411 0.179t-0.411-0.179l-8.321-8.321q-0.179-0.179-0.179-0.411t0.179-0.411l0.893-0.893q0.179-0.179 0.411-0.179t0.411 0.179l7.018 7.018 7.018-7.018q0.179-0.179 0.411-0.179t0.411 0.179l0.893 0.893q0.179 0.179 0.179 0.411z"/>
+        </symbol>
+        <symbol id="icon-folder-open" viewBox="0 0 34 32">
+            <path class="path1"
+                  d="M33.554 17q0 0.554-0.554 1.179l-6 7.071q-0.768 0.911-2.152 1.545t-2.563 0.634h-19.429q-0.607 0-1.080-0.232t-0.473-0.768q0-0.554 0.554-1.179l6-7.071q0.768-0.911 2.152-1.545t2.563-0.634h19.429q0.607 0 1.080 0.232t0.473 0.768zM27.429 10.857v2.857h-14.857q-1.679 0-3.518 0.848t-2.929 2.134l-6.107 7.179q0-0.071-0.009-0.223t-0.009-0.223v-17.143q0-1.643 1.179-2.821t2.821-1.179h5.714q1.643 0 2.821 1.179t1.179 2.821v0.571h9.714q1.643 0 2.821 1.179t1.179 2.821z"/>
+        </symbol>
+        <symbol id="icon-bars" viewBox="0 0 27 32">
+            <path class="path1"
+                  d="M27.429 24v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 14.857v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 5.714v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804z"/>
+        </symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 32 32">
+            <path class="path1"
+                  d="M17.696 18.286l1.143-4.571h-4.536l-1.143 4.571h4.536zM31.411 9.286l-1 4q-0.125 0.429-0.554 0.429h-5.839l-1.143 4.571h5.554q0.268 0 0.446 0.214 0.179 0.25 0.107 0.5l-1 4q-0.089 0.429-0.554 0.429h-5.839l-1.446 5.857q-0.125 0.429-0.554 0.429h-4q-0.286 0-0.464-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-4.536l-1.446 5.857q-0.125 0.429-0.554 0.429h-4.018q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-5.554q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1-4q0.125-0.429 0.554-0.429h5.839l1.143-4.571h-5.554q-0.268 0-0.446-0.214-0.179-0.25-0.107-0.5l1-4q0.089-0.429 0.554-0.429h5.839l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h4.536l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h5.554q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5z"/>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 43 32">
+            <path class="path1"
+                  d="M42.311 14.044c-0.178-0.178-0.533-0.356-0.711-0.356h-33.778l10.311-10.489c0.178-0.178 0.356-0.533 0.356-0.711 0-0.356-0.178-0.533-0.356-0.711l-1.6-1.422c-0.356-0.178-0.533-0.356-0.889-0.356s-0.533 0.178-0.711 0.356l-14.578 14.933c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l14.756 14.933c0 0.178 0.356 0.356 0.533 0.356s0.533-0.178 0.711-0.356l1.6-1.6c0.178-0.178 0.356-0.533 0.356-0.711s-0.178-0.533-0.356-0.711l-10.311-10.489h33.778c0.178 0 0.533-0.178 0.711-0.356 0.356-0.178 0.533-0.356 0.533-0.711v-2.133c0-0.356-0.178-0.711-0.356-0.889z"/>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 43 32">
+            <path class="path1"
+                  d="M0.356 17.956c0.178 0.178 0.533 0.356 0.711 0.356h33.778l-10.311 10.489c-0.178 0.178-0.356 0.533-0.356 0.711 0 0.356 0.178 0.533 0.356 0.711l1.6 1.6c0.178 0.178 0.533 0.356 0.711 0.356s0.533-0.178 0.711-0.356l14.756-14.933c0.178-0.356 0.356-0.711 0.356-0.889s-0.178-0.533-0.356-0.711l-14.756-14.933c0-0.178-0.356-0.356-0.533-0.356s-0.533 0.178-0.711 0.356l-1.6 1.6c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l10.311 10.489h-33.778c-0.178 0-0.533 0.178-0.711 0.356-0.356 0.178-0.533 0.356-0.533 0.711v2.311c0 0.178 0.178 0.533 0.356 0.711z"/>
+        </symbol>
+    </defs>
+</svg>
+</body>
+</html>

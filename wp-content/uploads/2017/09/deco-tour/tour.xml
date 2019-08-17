@@ -1,0 +1,184 @@
+<krpano version="1.19" title="2017-09-10，武汉清江山水73-1-703装修">
+    <include url="skin/vtourskin.xml"/>
+    <!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+    <skin_settings maps="false"
+                   maps_type="google"
+                   maps_bing_api_key=""
+                   maps_google_api_key=""
+                   maps_zoombuttons="false"
+                   gyro="true"
+                   webvr="true"
+                   webvr_gyro_keeplookingdirection="false"
+                   webvr_prev_next_hotspots="true"
+                   littleplanetintro="false"
+                   title="true"
+                   thumbs="true"
+                   thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+                   thumbs_opened="false"
+                   thumbs_text="false"
+                   thumbs_dragging="true"
+                   thumbs_onhoverscrolling="false"
+                   thumbs_scrollbuttons="false"
+                   thumbs_scrollindicator="false"
+                   thumbs_loop="false"
+                   tooltips_buttons="false"
+                   tooltips_thumbs="false"
+                   tooltips_hotspots="false"
+                   tooltips_mapspots="false"
+                   deeplinking="false"
+                   loadscene_flags="MERGE"
+                   loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+                   loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+                   loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+                   loadingtext="loading..."
+                   layout_width="100%"
+                   layout_maxwidth="814"
+                   controlbar_width="-24"
+                   controlbar_height="40"
+                   controlbar_offset="20"
+                   controlbar_offset_closed="-40"
+                   controlbar_overlap.no-fractionalscaling="10"
+                   controlbar_overlap.fractionalscaling="0"
+                   design_skin_images="vtourskin.png"
+                   design_bgcolor="0x2D3E50"
+                   design_bgalpha="0.8"
+                   design_bgborder="0"
+                   design_bgroundedge="1"
+                   design_bgshadow="0 4 10 0x000000 0.3"
+                   design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+                   design_thumbborder_padding="2"
+                   design_thumbborder_bgroundedge="0"
+                   design_text_css="color:#FFFFFF; font-family:Arial;"
+                   design_text_shadow="1"
+    />
+    <!-- startup action - load the first scene -->
+    <action name="startup" autorun="onstart">
+        if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+        loadscene(get(startscene), null, MERGE);
+        if(startactions !== null, startactions() );
+    </action>
+    <scene name="scene_keting" title="客厅" onstart="" thumburl="panos/keting.tiles/thumb.jpg" lat="" lng=""
+           heading="">
+        <layer type="text"
+               align="lefttop" x="10" y="10"
+               html="跳转到2017-07-13日全景"
+               css="font-size:16px; color:#000000;"
+               padding="2"
+               wordwrap="true"
+               bg="true"
+               bgcolor="0xFFFFFF"
+               onclick="openurl('//archived-blog.berlinchan.com/wp-content/uploads/2017/07/deco-pano-tour/tour.html',_self);"/>
+        <view hlookat="-310" vlookat="10" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/keting.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/keting.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/keting.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/keting.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="厨房" style="skin_hotspotstyle" ath="5.5" atv="10" linkedscene="scene_chufang"/>
+        <hotspot name="主卧" style="skin_hotspotstyle" ath="-250" atv="10" linkedscene="scene_zhuwo"/>
+        <hotspot name="次卧" style="skin_hotspotstyle" ath="-290" atv="10" linkedscene="scene_ciwo"/>
+        <hotspot name="洗手间" style="skin_hotspotstyle" ath="-265" atv="10" linkedscene="scene_cesuo"/>
+        <hotspot name="阳台" style="skin_hotspotstyle" ath="-185" atv="10" linkedscene="scene_yangtai"/>
+    </scene>
+    <scene name="scene_chufang" title="厨房" onstart="" thumburl="panos/chufang.tiles/thumb.jpg" lat="" lng=""
+           heading="">
+        <view hlookat="-92" vlookat="14" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/chufang.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/chufang.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/chufang.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/chufang.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="客厅" style="skin_hotspotstyle" ath="-95" atv="20" linkedscene="scene_keting"/>
+    </scene>
+    <scene name="scene_zhuwo" title="主卧" onstart="" thumburl="panos/zhuwo.tiles/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="-250" vlookat="15" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/zhuwo.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/zhuwo.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/zhuwo.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/zhuwo.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="客厅" style="skin_hotspotstyle" ath="-210" atv="20" linkedscene="scene_keting"/>
+    </scene>
+    <scene name="scene_ciwo" title="次卧" onstart="" thumburl="panos/ciwo.tiles/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="-290" vlookat="5" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/ciwo.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/ciwo.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/ciwo.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/ciwo.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="客厅" style="skin_hotspotstyle" ath="30" atv="15" linkedscene="scene_keting"/>
+    </scene>
+    <scene name="scene_cesuo" title="洗手间" onstart="" thumburl="panos/cesuo.tiles/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="-160" vlookat="10" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/cesuo.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/cesuo.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/cesuo.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/cesuo.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="客厅" style="skin_hotspotstyle" ath="-195" atv="25" linkedscene="scene_keting"/>
+    </scene>
+    <scene name="scene_yangtai" title="阳台" onstart="" thumburl="panos/yangtai.tiles/thumb.jpg" lat="" lng=""
+           heading="">
+        <view hlookat="-110" vlookat="15" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140"
+              limitview="auto"/>
+        <preview url="panos/yangtai.tiles/preview.jpg"/>
+        <image type="CUBE" multires="true" tilesize="512" progressive="false">
+            <level tiledimagewidth="1536" tiledimageheight="1536">
+                <cube url="panos/yangtai.tiles/l2_%s_%v_%h.jpg"/>
+            </level>
+            <level tiledimagewidth="768" tiledimageheight="768">
+                <cube url="panos/yangtai.tiles/l1_%s_%v_%h.jpg"/>
+            </level>
+            <mobile>
+                <cube url="panos/yangtai.tiles/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="客厅" style="skin_hotspotstyle" ath="-80" atv="25" linkedscene="scene_keting"/>
+    </scene>
+</krpano>

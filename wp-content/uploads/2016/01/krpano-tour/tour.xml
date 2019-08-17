@@ -1,0 +1,107 @@
+<krpano version="1.17.4" title="有壹手快修-武汉长港店" onstart="startup();">
+    <include url="skin/vtourskin.xml"/>
+    <!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+    <skin_settings bingmaps="false"
+                   bingmaps_key=""
+                   bingmaps_zoombuttons="false"
+                   gyro="true"
+                   thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+                   thumbs_opened="true"
+                   thumbs_text="true"
+                   thumbs_dragging="true"
+                   thumbs_onhoverscrolling="false"
+                   thumbs_scrollbuttons="false"
+                   thumbs_scrollindicator="false"
+                   thumbs_loop="false"
+                   tooltips_thumbs="false"
+                   tooltips_hotspots="false"
+                   tooltips_mapspots="false"
+                   controlbar_offset="20"
+    />
+    <action name="startup">
+        if(startscene === null, copy(startscene,scene[0].name));
+        loadscene(get(startscene), null, MERGE);
+        skin_showthumbs();
+        playsound(bgsnd, '%SWFPATH%/bgm.mp3', 0);
+    </action>
+    <scene name="brand" title="大门入口" onstart=""
+           thumburl="panos/brand/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="24.401" vlookat="1.743" fovtype="MFOV" fov="100.000" maxpixelzoom="1.0" fovmin="80" fovmax="120"
+              limitview="auto"/>
+        <preview url="panos/brand/preview.jpg"/>
+        <image>
+            <cube url="panos/brand/pano_%s.jpg"/>
+            <mobile>
+                <cube url="panos/brand/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="spot1" style="skin_hotspotstyle" ath="1.839" atv="-0.209"
+                 linkedscene="floor1"/>
+        <hotspot name="style_txts1" style="style_txt" ath="1.839" atv="-0.209" html="车间一楼"
+                 linkedscene="floor1"/>
+        <hotspot name="spot2" style="skin_hotspotstyle" ath="36.217" atv="0.088"
+                 linkedscene="front"/>
+        <hotspot name="style_txts2" style="style_txt" ath="36.217" atv="0.088" html="前台"
+                 linkedscene="front"/>
+    </scene>
+    <scene name="front" title="前台" onstart=""
+           thumburl="panos/front/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="199.311" vlookat="14.689" fovtype="MFOV" fov="100.000" maxpixelzoom="1.0" fovmin="80"
+              fovmax="120" limitview="auto"/>
+        <preview url="panos/front/preview.jpg"/>
+        <image>
+            <cube url="panos/front/pano_%s.jpg"/>
+            <mobile>
+                <cube url="panos/front/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="spot1" style="skin_hotspotstyle" ath="114.498" atv="1.869"
+                 linkedscene="brand"/>
+        <hotspot name="style_txts1" style="style_txt" ath="114.498" atv="1.869" html="大门入口"
+                 linkedscene="brand"/>
+        <hotspot name="spot2" style="skin_hotspotstyle" ath="152.488" atv="0.026"
+                 linkedscene="floor1"/>
+        <hotspot name="style_txts2" style="style_txt" ath="152.488" atv="0.026" html="车间一楼"
+                 linkedscene="floor1"/>
+    </scene>
+    <scene name="floor1" title="车间一楼" onstart=""
+           thumburl="panos/floor1/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="182.179" vlookat="3.875" fovtype="MFOV" fov="100.000" maxpixelzoom="1.0" fovmin="80" fovmax="120"
+              limitview="auto"/>
+        <preview url="panos/floor1/preview.jpg"/>
+        <image>
+            <cube url="panos/floor1/pano_%s.jpg"/>
+            <mobile>
+                <cube url="panos/floor1/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="spot1" style="skin_hotspotstyle" ath="-134.271" atv="2.435"
+                 linkedscene="floor2"/>
+        <hotspot name="style_txts1" style="style_txt" ath="-134.271" atv="2.435" html="车间二楼"
+                 linkedscene="floor2"/>
+        <hotspot name="spot2" style="skin_hotspotstyle" ath="-84.489" atv="1.124"
+                 linkedscene="front"/>
+        <hotspot name="style_txts2" style="style_txt" ath="-84.489" atv="1.124" html="前台"
+                 linkedscene="front"/>
+    </scene>
+    <scene name="floor2" title="车间二楼" onstart=""
+           thumburl="panos/floor2/thumb.jpg" lat="" lng="" heading="">
+        <view hlookat="-71.914" vlookat="4.655" fovtype="MFOV" fov="100.000" maxpixelzoom="1.0" fovmin="80" fovmax="120"
+              limitview="auto"/>
+        <preview url="panos/floor2/preview.jpg"/>
+        <image>
+            <cube url="panos/floor2/pano_%s.jpg"/>
+            <mobile>
+                <cube url="panos/floor2/mobile_%s.jpg"/>
+            </mobile>
+        </image>
+        <!-- place your scene hotspots here -->
+        <hotspot name="spot1" style="skin_hotspotstyle" ath="167.746" atv="1.274"
+                 linkedscene="floor1"/>
+        <hotspot name="style_txts1" style="style_txt" ath="167.746" atv="1.274" html="车间一楼"
+                 linkedscene="floor1"/>
+    </scene>
+</krpano>
