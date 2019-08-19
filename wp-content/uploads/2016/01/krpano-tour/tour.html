@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>有壹手快修-武汉长港店</title>
+    <meta name="viewport"
+          content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <style>
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        @media only screen and (min-device-width: 800px) {
+            html {
+                overflow: hidden;
+            }
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+<script src="tour.js"></script>
+<div id="pano" style="width:100%;height:100%;">
+    <noscript>ERROR:Javascript not activated</noscript>
+    <script>
+        embedpano({
+            swf: "tour.swf",
+            xml: "tour.xml",
+            target: "pano",
+            html5: "prefer",
+            passQueryParameters: true,
+            bgcolor: "#ffffff"
+        });
+    </script>
+    <script type="text/javascript">
+        var dataForWeixin = {
+            appId: "",
+            MsgImg: "http://f.y1s.cn/360/wh_cg/TLImg.jpg",
+            TLImg: "http://f.y1s.cn/360/wh_cg/TLImg.jpg",
+            url: "http://f.y1s.cn/360/wh_cg/",
+            title: "有壹手快修·武汉长港店",
+            desc: "采用电商、移动互联、SNS的互联网技术改造传统的汽修行业，致力于成为汽修行业o2o服务模式的成功范例",
+            fakeid: "",
+            callback: function () {
+            }
+        };
+
+        (function () {
+
+            var onBridgeReady = function () {
+                WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+                    WeixinJSBridge.invoke('sendAppMessage', {
+                        "appid": dataForWeixin.appId,
+                        "img_url": dataForWeixin.MsgImg,
+                        "img_width": "120",
+                        "img_height": "120",
+                        "link": dataForWeixin.url,
+                        "desc": dataForWeixin.desc,
+                        "title": dataForWeixin.title
+                    }, function (res) {
+                        (dataForWeixin.callback)();
+                    });
+                });
+
+                WeixinJSBridge.on('menu:share:timeline', function (argv) {
+
+                    (dataForWeixin.callback)();
+                    WeixinJSBridge.invoke('shareTimeline', {
+                        "img_url": dataForWeixin.TLImg,
+                        "img_width": "120",
+                        "img_height": "120",
+                        "link": dataForWeixin.url,
+                        "desc": dataForWeixin.desc,
+                        "title": dataForWeixin.title
+                    }, function (res) {
+                    });
+                });
+
+                WeixinJSBridge.on('menu:share:weibo', function (argv) {
+                    WeixinJSBridge.invoke('shareWeibo', {
+                        "content": dataForWeixin.title,
+                        "url": dataForWeixin.url
+                    }, function (res) {
+                        (dataForWeixin.callback)();
+                    });
+                });
+
+                WeixinJSBridge.on('menu:share:facebook', function (argv) {
+                    (dataForWeixin.callback)();
+                    WeixinJSBridge.invoke('shareFB', {
+                        "img_url": dataForWeixin.TLImg,
+                        "img_width": "120",
+                        "img_height": "120",
+                        "link": dataForWeixin.url,
+                        "desc": dataForWeixin.desc,
+                        "title": dataForWeixin.title
+                    }, function (res) {
+                    });
+                });
+
+            };
+
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        })();
+    </script>
+</div>
+</body>
+
+</html>
