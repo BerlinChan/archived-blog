@@ -1,6 +1,6 @@
 # Wordpress 旧 blog 存档
 [https://archived-blog.berlinchan.com](https://archived-blog.berlinchan.com)  
-存档用，由插件 WP2Static 生成并精简处理  
+存档用，由插件 WP2Static 生成并精简处理
 
 ## Tools
 tools 目录下存放批处理工具

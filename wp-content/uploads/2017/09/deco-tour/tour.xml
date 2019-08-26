@@ -1,4 +1,4 @@
-<krpano version="1.19" title="2017-09-10，武汉清江山水73-1-703装修">
+<krpano version="1.19" title="2017-09-10，装修">
     <include url="skin/vtourskin.xml"/>
     <!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
     <skin_settings maps="false"
