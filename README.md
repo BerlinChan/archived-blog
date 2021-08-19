@@ -9,7 +9,6 @@ tools 目录下存放批处理工具
 
 ## TODO
 
-- replace v.swf video player
 - remove unused uploads
 
 ## License
